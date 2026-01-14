@@ -1,0 +1,44 @@
+name: CI - Tests & Quality
+
+on:
+  push:
+    branches: [ develop, version-14, version-15 ]
+  pull_request:
+    branches: [ develop, version-14, version-15 ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+        erpnext-branch: ["version-14", "version-15"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install bench & create site
+        run: |
+          pip install --upgrade pip
+          pip install frappe-bench
+          bench init frappe-bench --frappe-branch ${{ matrix.erpnext-branch }} --python ${{ matrix.python-version }}
+          cd frappe-bench
+          bench new-site test_site --db-name test_site --mariadb-root-password root --admin-password admin --no-mariadb-socket
+
+      - name: Install your app
+        working-directory: frappe-bench
+        run: |
+          bench get-app --branch ${{ github.head_ref || github.ref_name }} erpnext_custom_app ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
+
+      - name: Run tests
+        working-directory: frappe-bench
+        run: |
+          bench --site test_site install-app erpnext_custom_app
+          bench --site test_site run-tests --app erpnext_custom_app
