@@ -30,13 +30,13 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # <-- Use PAT here
 
       # Step 3: Deploy generated files to the 'output' branch
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: "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"
           publish_dir: ./dist
           publish_branch: output
           commit_message: "Update snake animation [skip ci]"
