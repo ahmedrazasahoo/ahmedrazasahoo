@@ -107,11 +107,11 @@
   <p>Looking forward to working on exciting Frappe/ERPNext projects with you! 💙</p>
 </div>
 
-<!-- Optional: Contribution Snake (add if you want – requires GitHub Action setup) -->
-<!-- <div align="center">
+<div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/raza9100/raza9100/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/raza9100/raza9100/output/github-contribution-grid-snake.svg" />
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/raza9100/raza9100/output/github-contribution-grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/raza9100/raza9100/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/raza9100/raza9100/output/github-snake.svg" />
+    <img alt="GitHub Contributions Snake" src="https://raw.githubusercontent.com/raza9100/raza9100/output/github-snake.svg" />
   </picture>
-</div> -->
+</div>
+
