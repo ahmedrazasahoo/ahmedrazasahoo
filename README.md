@@ -87,7 +87,8 @@
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=3" width="100%" />
 
 <details>
-<summary><h2>📂&nbsp; Projects</h2></summary>
+<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-projects.svg" alt="Projects tab" height="52" /></summary>
+<br />
 
 <table>
 <tr>
@@ -99,51 +100,70 @@ Custom ERPNext solution — Inventory • Sales • Reporting & more
 [![GitHub](https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/NexTash/Qetah-Phase-1)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-22C55E?style=flat-square&logo=vercel&logoColor=white)](https://jungheinrichsa.edponline.co.za/)
 
-</td>
-</tr>
-</table>
+---
 
 📦 More on GitHub → [github.com/ahmedrazasahoo?tab=repositories](https://github.com/ahmedrazasahoo?tab=repositories)
 
 **💬 Got a Frappe/ERPNext project?**
 Open to freelance & long-term collaborations → DM me! 🚀
 
+</td>
+</tr>
+</table>
+
 </details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=3" width="100%" />
 
 <details>
-<summary><h2>💼&nbsp; Experience</h2></summary>
+<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-experience.svg" alt="Experience tab" height="52" /></summary>
+<br />
+
+<table>
+<tr>
+<td width="100%">
 
 <!--
   TODO(ahmed): replace this with your real work history, e.g.:
   **Frappe/ERPNext Developer** — Company Name (Mon YYYY – Present)
   - What you built or improved, in one or two lines.
 -->
-🚧 Detailed work history coming soon. In the meantime, [Qetah Phase 1](https://github.com/NexTash/Qetah-Phase-1) and the rest of my [repositories](https://github.com/ahmedrazasahoo?tab=repositories) are the best record of what I've built.
+🚧 **Detailed work history coming soon.**
+In the meantime, [Qetah Phase 1](https://github.com/NexTash/Qetah-Phase-1) and the rest of my [repositories](https://github.com/ahmedrazasahoo?tab=repositories) are the best record of what I've built.
+
+</td>
+</tr>
+</table>
 
 </details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=3" width="100%" />
 
 <details>
-<summary><h2>🔗&nbsp; Social &amp; Contact</h2></summary>
+<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-social.svg" alt="Social & Contact tab" height="52" /></summary>
+<br />
 
-<div align="center">
-  <a href="https://github.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="mailto:ahmedrazasahoo@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://instagram.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://facebook.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
-  <!-- Uncomment once you add your real LinkedIn URL:
-  <a href="https://www.linkedin.com/in/YOUR-REAL-PROFILE"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  -->
-</div>
+<table>
+<tr>
+<td width="100%" align="center">
+
+<a href="https://github.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="mailto:ahmedrazasahoo@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://instagram.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+<a href="https://facebook.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+<!-- Uncomment once you add your real LinkedIn URL:
+<a href="https://www.linkedin.com/in/YOUR-REAL-PROFILE"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+-->
 
 📧 **ahmedrazasahoo@gmail.com**
 
-<div align="center">
-  <strong>Open to freelance &amp; long-term Frappe / ERPNext projects 💙</strong>
-</div>
+---
+
+**Open to freelance &amp; long-term Frappe / ERPNext projects 💙**
+
+</td>
+</tr>
+</table>
 
 </details>
 

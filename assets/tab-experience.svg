@@ -1,0 +1,18 @@
+<svg width="300" height="64" viewBox="0 0 300 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tabExp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="sheenExp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadowExp" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="292" height="52" rx="26" fill="url(#tabExp)" filter="url(#shadowExp)"/>
+  <path d="M 30 30 A 26 26 0 0 1 270 30 Z" fill="url(#sheenExp)"/>
+  <text x="150" y="37" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">💼&#160; EXPERIENCE</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="340" height="64" viewBox="0 0 340 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tabSoc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0E7490"/>
+    </linearGradient>
+    <linearGradient id="sheenSoc" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadowSoc" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="332" height="52" rx="26" fill="url(#tabSoc)" filter="url(#shadowSoc)"/>
+  <path d="M 30 30 A 26 26 0 0 1 310 30 Z" fill="url(#sheenSoc)"/>
+  <text x="170" y="37" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">🔗&#160; SOCIAL &amp; CONTACT</text>
+</svg>
