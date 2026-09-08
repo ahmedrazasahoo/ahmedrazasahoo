@@ -39,14 +39,13 @@
 -->
 
 <details open>
-<summary><h2>🏠&nbsp; Main</h2></summary>
+<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-main.svg" alt="Main tab" height="52" /></summary>
+<br />
 
 - 🇵🇰 **Frappe / ERPNext Developer** from Lahore, Pakistan
 - 💼 Custom ERP solutions, modules, APIs & business automation
 - 🔧 Clean, scalable code with strong business logic focus
 - 🌱 Exploring **AI integrations** with ERPNext + modern frontend
-
-### 🛠️ Tech Stack
 
 <div align="center">
   <picture>
