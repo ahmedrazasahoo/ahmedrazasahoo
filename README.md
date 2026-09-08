@@ -50,20 +50,13 @@
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=python,js,html,css,bootstrap,tailwind,react,vue,git,docker,mariadb,redis,vscode,github&theme=dark" alt="Tech stack icons" />
-  <br><br>
-
-  ![Frappe](https://img.shields.io/badge/Frappe-0089D6?style=for-the-badge&logo=frappe&logoColor=white)
-  ![ERPNext](https://img.shields.io/badge/ERPNext-0089D6?style=for-the-badge&logo=frappe&logoColor=white)
-  ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-  ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-  <br />
-  ![REST APIs](https://img.shields.io/badge/REST_APIs-009688?style=for-the-badge)
-  ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-  ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-  ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
-  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 </div>
+
+| Category | Technologies |
+| :--- | :--- |
+| **Backend & ERP** | `Frappe` `ERPNext` `Python` `REST APIs` |
+| **Frontend** | `JavaScript` `React` `Vue` `Tailwind` |
+| **Infra & Tools** | `MariaDB` `Redis` `Docker` `Git` `Bench` |
 
 ### 📊 GitHub Stats
 
