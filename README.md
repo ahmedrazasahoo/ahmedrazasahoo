@@ -21,6 +21,7 @@
 
 <br /><br />
 
+<a href="https://ahmedrazasahoo.github.io/"><img src="https://img.shields.io/badge/Portfolio-Visit_Site-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio site" /></a>
 <a href="https://github.com/ahmedrazasahoo?tab=followers"><img src="https://img.shields.io/github/followers/ahmedrazasahoo?style=for-the-badge&color=22C55E&logo=github&logoColor=white&label=Followers" alt="GitHub Followers" /></a>
 <a href="https://github.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/GitHub-ahmedrazasahoo-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 <!-- Uncomment once you add your real LinkedIn URL:
