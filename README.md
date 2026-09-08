@@ -100,6 +100,42 @@
 <tr>
 <td width="100%">
 
+**🛋️ Apple Furniture — E-Commerce Platform**
+Full-featured e-commerce platform for Apple Furniture & Interior. Vue.js frontend for a fast, responsive shopping experience; Frappe/ERPNext backend runs the entire sales lifecycle — inventory, customers, orders.
+
+`Vue.js` `Frappe Framework` `ERPNext` `Backend Development`
+
+[![Live Site](https://img.shields.io/badge/Live_Site-22C55E?style=flat-square&logo=googlechrome&logoColor=white)](https://applefurniture.pk/)
+
+---
+
+**🏭 EMKAN Engineering ERP**
+Custom enterprise management platform for EMKAN Engineering, a Qatar-based engineering, fabrication & contracting company (Oil & Gas, Petrochemical, Energy, Industrial). Custom workflows for Material Requests, Purchase Orders, Purchase Receipts, Payment Requests/Entries, Stock Entries & vehicle service requests, plus custom reports, dashboards, DocTypes, permissions, and JS/Python customization.
+
+`Frappe Framework` `ERPNext` `Python` `JavaScript` `Vue.js` `REST APIs` `ERP Customization` `Workflow Automation`
+
+[![Live Site](https://img.shields.io/badge/Live_Site-2563EB?style=flat-square&logo=googlechrome&logoColor=white)](https://emkanerp.frappe.cloud/)
+
+---
+
+**🤖 Platia Copilot**
+AI-powered enterprise assistant built on ERPNext/Frappe. Skill-based architecture where each business capability is a reusable AI skill, with tool calling to execute backend operations, RAG over ERP/business knowledge, secure role-based access, and multi-model LLM support.
+
+`AI/LLM Integration` `ERPNext` `Frappe Framework` `Python` `RAG` `REST APIs`
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-7C3AED?style=flat-square&logo=googlechrome&logoColor=white)](http://rdemo.platia360.com/)
+
+---
+
+**🎓 Teachafy — ERPNext &amp; HRMS Implementation**
+Implemented and customized ERPNext + Frappe HRMS for Teachafy — Employee Management, Attendance, Leave &amp; Shift Management, Departments, Roles &amp; Permissions. Designed a fully white-labeled ERPNext UI (custom theme, branding, dashboards, login screens) matched to a customized Teachafy website theme, and integrated third-party attendance/biometric systems via REST APIs.
+
+`ERPNext` `Frappe Framework` `Frappe HRMS` `Python` `JavaScript` `UI/UX Customization` `White-Labeling` `REST APIs` `MariaDB`
+
+[![Live Site](https://img.shields.io/badge/Live_Site-06B6D4?style=flat-square&logo=googlechrome&logoColor=white)](https://teachafy.com/)
+
+---
+
 **🏗️ Qetah Phase 1**
 Custom ERPNext solution — Inventory • Sales • Reporting & more
 
