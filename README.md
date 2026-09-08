@@ -54,19 +54,22 @@
 
 ### 📊 GitHub Stats
 
+<!--
+  github-readme-stats' main card, top-langs, and github-profile-trophy
+  were all confirmed broken (naturalWidth 0 on the live page) -- these
+  free shared instances are well known for hitting GitHub API rate
+  limits under public load, independent of anything in this file.
+  Replaced with a self-hosted glass card (assets/stats.svg) built from
+  real data pulled via `gh api`/`gh repo list`, in the same visual
+  language as the banner and tech-stack graphics, and with a
+  dependency only on this repo instead of a third party's uptime.
+-->
 <div align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=ahmedrazasahoo&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=0D1117&title_color=2563EB&icon_color=22C55E" alt="GitHub stats" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmedrazasahoo&theme=radical&hide_border=true&background=0D1117&ring=2563EB&fire=22C55E" alt="GitHub streak stats" />
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats.svg" alt="GitHub stats" width="100%" />
 </div>
 
 <div align="center">
-  <img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedrazasahoo&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=2563EB" alt="Top languages" />
-</div>
-
-### 🏆 Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ahmedrazasahoo&theme=radical&no-frame=true&column=7&margin-w=8" alt="GitHub trophies" />
+  <img width="60%" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmedrazasahoo&theme=radical&hide_border=true&background=0D1117&ring=2563EB&fire=22C55E" alt="GitHub streak stats" />
 </div>
 
 ### 🐍 Contribution Snake
