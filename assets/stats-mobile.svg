@@ -49,21 +49,21 @@
     <rect x="16" y="182" width="348" height="262" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3m)" stroke-width="1.5" filter="url(#cardShadow3m)"/>
     <text x="40" y="216" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">MOST USED LANGUAGES</text>
     
-    <text x="40" y="250" font-size="15" font-weight="600" fill="#F8FAFC">HTML</text>
-    <text x="340" y="250" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">33.3%</text>
+    <text x="40" y="250" font-size="15" font-weight="600" fill="#F8FAFC">Python</text>
+    <text x="340" y="250" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">30.8%</text>
     <rect x="40" y="258" width="300" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="40" y="258" width="100" height="12" rx="6" fill="url(#barBlueM)"/>
-    <text x="40" y="304" font-size="15" font-weight="600" fill="#F8FAFC">Vue</text>
-    <text x="340" y="304" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">25.0%</text>
+    <rect x="40" y="258" width="92" height="12" rx="6" fill="url(#barBlueM)"/>
+    <text x="40" y="304" font-size="15" font-weight="600" fill="#F8FAFC">HTML</text>
+    <text x="340" y="304" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">30.8%</text>
     <rect x="40" y="312" width="300" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="40" y="312" width="75" height="12" rx="6" fill="url(#barGreenM)"/>
-    <text x="40" y="358" font-size="15" font-weight="600" fill="#F8FAFC">Python</text>
-    <text x="340" y="358" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">25.0%</text>
+    <rect x="40" y="312" width="92" height="12" rx="6" fill="url(#barGreenM)"/>
+    <text x="40" y="358" font-size="15" font-weight="600" fill="#F8FAFC">Vue</text>
+    <text x="340" y="358" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">23.1%</text>
     <rect x="40" y="366" width="300" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="40" y="366" width="75" height="12" rx="6" fill="url(#barPurpleM)"/>
+    <rect x="40" y="366" width="69" height="12" rx="6" fill="url(#barPurpleM)"/>
     <text x="40" y="412" font-size="15" font-weight="600" fill="#F8FAFC">TypeScript</text>
-    <text x="340" y="412" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">8.3%</text>
+    <text x="340" y="412" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">7.7%</text>
     <rect x="40" y="420" width="300" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="40" y="420" width="25" height="12" rx="6" fill="url(#barCyanM)"/>
+    <rect x="40" y="420" width="23" height="12" rx="6" fill="url(#barCyanM)"/>
   </g>
 </svg>
