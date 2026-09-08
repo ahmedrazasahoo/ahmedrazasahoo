@@ -100,7 +100,7 @@
 <tr>
 <td width="100%">
 
-**🛋️ Apple Furniture — E-Commerce Platform**
+**Apple Furniture — E-Commerce Platform**
 Full-featured e-commerce platform for Apple Furniture & Interior. Vue.js frontend for a fast, responsive shopping experience; Frappe/ERPNext backend runs the entire sales lifecycle — inventory, customers, orders.
 
 `Vue.js` `Frappe Framework` `ERPNext` `Backend Development`
@@ -109,7 +109,7 @@ Full-featured e-commerce platform for Apple Furniture & Interior. Vue.js fronten
 
 ---
 
-**🏭 EMKAN Engineering ERP**
+**EMKAN Engineering ERP**
 Custom enterprise management platform for EMKAN Engineering, a Qatar-based engineering, fabrication & contracting company (Oil & Gas, Petrochemical, Energy, Industrial). Custom workflows for Material Requests, Purchase Orders, Purchase Receipts, Payment Requests/Entries, Stock Entries & vehicle service requests, plus custom reports, dashboards, DocTypes, permissions, and JS/Python customization.
 
 `Frappe Framework` `ERPNext` `Python` `JavaScript` `Vue.js` `REST APIs` `ERP Customization` `Workflow Automation`
@@ -118,7 +118,7 @@ Custom enterprise management platform for EMKAN Engineering, a Qatar-based engin
 
 ---
 
-**🤖 Platia Copilot**
+**Platia Copilot**
 AI-powered enterprise assistant built on ERPNext/Frappe. Skill-based architecture where each business capability is a reusable AI skill, with tool calling to execute backend operations, RAG over ERP/business knowledge, secure role-based access, and multi-model LLM support.
 
 `AI/LLM Integration` `ERPNext` `Frappe Framework` `Python` `RAG` `REST APIs`
@@ -127,7 +127,7 @@ AI-powered enterprise assistant built on ERPNext/Frappe. Skill-based architectur
 
 ---
 
-**🎓 Teachafy — ERPNext &amp; HRMS Implementation**
+**Teachafy — ERPNext &amp; HRMS Implementation**
 Implemented and customized ERPNext + Frappe HRMS for Teachafy — Employee Management, Attendance, Leave &amp; Shift Management, Departments, Roles &amp; Permissions. Designed a fully white-labeled ERPNext UI (custom theme, branding, dashboards, login screens) matched to a customized Teachafy website theme, and integrated third-party attendance/biometric systems via REST APIs.
 
 `ERPNext` `Frappe Framework` `Frappe HRMS` `Python` `JavaScript` `UI/UX Customization` `White-Labeling` `REST APIs` `MariaDB`
@@ -136,11 +136,10 @@ Implemented and customized ERPNext + Frappe HRMS for Teachafy — Employee Manag
 
 ---
 
-**🏗️ Qetah Phase 1**
-Custom ERPNext solution — Inventory • Sales • Reporting & more
+**Qetah Phase 1**
+Custom ERPNext solution for a freelance services platform with cryptocurrency payment support — inventory, sales &amp; reporting.
 
 [![GitHub](https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/NexTash/Qetah-Phase-1)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-22C55E?style=flat-square&logo=vercel&logoColor=white)](https://jungheinrichsa.edponline.co.za/)
 
 ---
 
@@ -165,13 +164,18 @@ Open to freelance & long-term collaborations → DM me! 🚀
 <tr>
 <td width="100%">
 
-<!--
-  TODO(ahmed): replace this with your real work history, e.g.:
-  **Frappe/ERPNext Developer** — Company Name (Mon YYYY – Present)
-  - What you built or improved, in one or two lines.
--->
-🚧 **Detailed work history coming soon.**
-In the meantime, [Qetah Phase 1](https://github.com/NexTash/Qetah-Phase-1) and the rest of my [repositories](https://github.com/ahmedrazasahoo?tab=repositories) are the best record of what I've built.
+**Team Lead** · NexTash · Full-time
+*Progressed from Backend Developer → Senior Developer → Team Lead*
+📍 Lahore, Punjab, Pakistan · On-site &nbsp;·&nbsp; 🗓️ May 2022 – Present · 4 yrs 5 mos
+
+- Developing and customizing ERPNext modules — designing and implementing backend solutions that extend ERPNext functionality with seamless business-workflow integration
+- Custom script development — crafting tailored scripts to automate and streamline business processes within ERPNext
+
+`Frappe` `Back-End Web Development`
+
+---
+
+🚧 More detailed history coming soon. In the meantime, [Qetah Phase 1](https://github.com/NexTash/Qetah-Phase-1) and the rest of my [repositories](https://github.com/ahmedrazasahoo?tab=repositories) are the best record of what I've built.
 
 </td>
 </tr>
