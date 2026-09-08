@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:22C55E&height=180&section=header&text=Ahmed%20Raza&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Frappe%20%26%20ERPNext%20Developer&descAlignY=58&descSize=18" alt="Header banner" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:22C55E&height=180&section=header&text=Ahmed%20Raza&fontSize=48&fontColor=ffffff&animation=null&fontAlignY=38&desc=Frappe%20%26%20ERPNext%20Developer&descAlignY=58&descSize=18" alt="Header banner" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=4000&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Custom+Frappe+%26+ERPNext+development;Modules+%E2%80%A2+Integrations+%E2%80%A2+Automation;Building+business+solutions+from+Pakistan+%F0%9F%87%B5%F0%9F%87%B0" alt="Typing SVG" />
 
@@ -143,4 +143,4 @@ Open to freelance & long-term collaborations → DM me! 🚀
 
 </details>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22C55E,100:2563EB&height=100&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22C55E,100:2563EB&height=100&section=footer&animation=null" width="100%" />
