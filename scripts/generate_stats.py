@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Regenerates assets/stats.svg and assets/stats-mobile.svg from live GitHub data.
+"""Regenerates the GitHub Stats and streak text in README.md from live data.
 
 Run by .github/workflows/update-stats.yml on a schedule so the profile's
-GitHub Stats card never goes stale and never depends on a third-party
-rate-limited service. Uses only public REST endpoints (no PAT required) --
-the default GITHUB_TOKEN can't see private repos, so counts here are
+stats never go stale and never depend on a third-party rate-limited
+service (github-readme-stats, github-profile-trophy, and
+github-readme-streak-stats were all confirmed broken at various points).
+Writes plain markdown between HTML comment markers -- no images involved.
+Uses only public REST/GraphQL endpoints (no PAT required) -- the default
+GITHUB_TOKEN can't see private repos, so repo/star counts are
 public-repo-only by design.
 """
 import json
 import os
+import re
 import urllib.request
+from datetime import datetime, timedelta
 
 USERNAME = os.environ.get("GITHUB_REPOSITORY_OWNER", "ahmedrazasahoo")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
-
-BAR_GRADIENTS = ["barBlue", "barGreen", "barPurple", "barCyan"]
 
 
 def api_get(path):
@@ -24,6 +27,113 @@ def api_get(path):
         req.add_header("Authorization", f"Bearer {TOKEN}")
     with urllib.request.urlopen(req) as resp:
         return json.loads(resp.read().decode())
+
+
+def graphql(query, variables):
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=json.dumps({"query": query, "variables": variables}).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    if TOKEN:
+        req.add_header("Authorization", f"Bearer {TOKEN}")
+    with urllib.request.urlopen(req) as resp:
+        return json.loads(resp.read().decode())
+
+
+CALENDAR_QUERY = """
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      contributionCalendar {
+        totalContributions
+        weeks { contributionDays { date contributionCount } }
+      }
+    }
+  }
+}
+"""
+
+
+def fetch_contribution_stats(created_at):
+    created = datetime.strptime(created_at[:10], "%Y-%m-%d")
+    now = datetime.utcnow()
+
+    all_time_total = 0
+    last_window_days = []
+    cursor = created
+    while cursor < now:
+        window_end = min(cursor + timedelta(days=365), now)
+        data = graphql(CALENDAR_QUERY, {
+            "login": USERNAME,
+            "from": cursor.strftime("%Y-%m-%dT00:00:00Z"),
+            "to": window_end.strftime("%Y-%m-%dT23:59:59Z"),
+        })
+        cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+        all_time_total += cal["totalContributions"]
+        last_window_days = [
+            (d["date"], d["contributionCount"])
+            for week in cal["weeks"] for d in week["contributionDays"]
+        ]
+        cursor = window_end
+
+    i = len(last_window_days) - 1
+    if last_window_days and last_window_days[i][1] == 0:
+        i -= 1
+    current_streak = 0
+    while i >= 0 and last_window_days[i][1] > 0:
+        current_streak += 1
+        i -= 1
+
+    longest_streak = 0
+    run = 0
+    for _, count in last_window_days:
+        if count > 0:
+            run += 1
+            longest_streak = max(longest_streak, run)
+        else:
+            run = 0
+
+    return {
+        "total_contributions": all_time_total,
+        "current_streak": current_streak,
+        "longest_streak": longest_streak,
+    }
+
+
+def update_readme_marker_section(marker, text):
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    readme_path = os.path.join(repo_root, "README.md")
+    with open(readme_path) as f:
+        content = f.read()
+
+    new_content = re.sub(
+        rf"(<!--{marker}-START-->\n).*?(\n<!--{marker}-END-->)",
+        lambda m: m.group(1) + text + m.group(2),
+        content,
+        flags=re.DOTALL,
+    )
+    with open(readme_path, "w") as f:
+        f.write(new_content)
+
+
+def render_streak_markdown(streak):
+    return (
+        f'🔥 **{streak["total_contributions"]:,}** total contributions '
+        f'&nbsp;·&nbsp; **{streak["current_streak"]}**-day current streak '
+        f'&nbsp;·&nbsp; **{streak["longest_streak"]}**-day longest streak'
+    )
+
+
+def render_stats_markdown(data):
+    lang_line = " • ".join(f'{l["name"]} {l["pct"]}%' for l in data["languages"])
+    return (
+        "| Public Repos | Total Stars | Followers | Following |\n"
+        "|:---:|:---:|:---:|:---:|\n"
+        f'| {data["public_repos"]} | {data["total_stars"]} | {data["followers"]} | {data["following"]} |\n'
+        "\n"
+        f"**Most Used Languages:** {lang_line}"
+    )
 
 
 def fetch_data():
@@ -60,153 +170,20 @@ def fetch_data():
         "following": user.get("following", 0),
         "total_stars": total_stars,
         "languages": languages,
+        "created_at": user.get("created_at"),
     }
 
-
-def render_desktop(data):
-    bars = []
-    y = 104
-    for lang, grad in zip(data["languages"], BAR_GRADIENTS):
-        bar_w = round(564 * lang["pct"] / 100)
-        bars.append(f'''
-    <text x="368" y="{y}" font-size="14" font-weight="600" fill="#F8FAFC">{lang["name"]}</text>
-    <text x="932" y="{y}" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">{lang["pct"]}%</text>
-    <rect x="368" y="{y + 8}" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="{y + 8}" width="{bar_w}" height="10" rx="5" fill="url(#{grad})"/>''')
-        y += 40
-
-    return f'''<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120"/>
-      <stop offset="100%" stop-color="#111827"/>
-    </linearGradient>
-    <filter id="blob3" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="45"/>
-    </filter>
-    <filter id="cardShadow3" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
-    </filter>
-    <linearGradient id="cardStroke3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="barBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/>
-    </linearGradient>
-    <linearGradient id="barGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#16A34A"/><stop offset="100%" stop-color="#4ADE80"/>
-    </linearGradient>
-    <linearGradient id="barPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A78BFA"/>
-    </linearGradient>
-    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1000" height="300" fill="url(#bg3)"/>
-  <circle cx="90"  cy="40"  r="110" fill="#2563EB" opacity="0.45" filter="url(#blob3)"/>
-  <circle cx="950" cy="60"  r="120" fill="#22C55E" opacity="0.40" filter="url(#blob3)"/>
-  <circle cx="520" cy="280" r="130" fill="#7C3AED" opacity="0.35" filter="url(#blob3)"/>
-
-  <g font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-
-    <rect x="40" y="40" width="280" height="220" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3)" stroke-width="1.5" filter="url(#cardShadow3)"/>
-    <text x="70" y="80" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">GITHUB OVERVIEW</text>
-
-    <text x="70" y="130" font-size="34" font-weight="700" fill="#F8FAFC">{data["public_repos"]}</text>
-    <text x="70" y="152" font-size="13" font-weight="500" fill="#93C5FD">Public repositories</text>
-
-    <text x="70" y="195" font-size="34" font-weight="700" fill="#F8FAFC">{data["total_stars"]}</text>
-    <text x="70" y="217" font-size="13" font-weight="500" fill="#6EE7B7">Total stars</text>
-
-    <text x="70" y="245" font-size="15" font-weight="600" fill="#D8B4FE">{data["followers"]} followers &#8226; {data["following"]} following</text>
-
-    <rect x="340" y="40" width="620" height="220" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3)" stroke-width="1.5" filter="url(#cardShadow3)"/>
-    <text x="368" y="72" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">MOST USED LANGUAGES</text>
-    {"".join(bars)}
-  </g>
-</svg>
-'''
-
-
-def render_mobile(data):
-    bars = []
-    y = 250
-    for lang, grad in zip(data["languages"], BAR_GRADIENTS):
-        bar_w = round(300 * lang["pct"] / 100)
-        bars.append(f'''
-    <text x="40" y="{y}" font-size="15" font-weight="600" fill="#F8FAFC">{lang["name"]}</text>
-    <text x="340" y="{y}" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">{lang["pct"]}%</text>
-    <rect x="40" y="{y + 8}" width="300" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="40" y="{y + 8}" width="{bar_w}" height="12" rx="6" fill="url(#{grad}M)"/>''')
-        y += 54
-
-    return f'''<svg width="380" height="460" viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg3m" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120"/>
-      <stop offset="100%" stop-color="#111827"/>
-    </linearGradient>
-    <filter id="blob3m" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="40"/>
-    </filter>
-    <filter id="cardShadow3m" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
-    </filter>
-    <linearGradient id="cardStroke3m" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="barBlueM" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/>
-    </linearGradient>
-    <linearGradient id="barGreenM" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#16A34A"/><stop offset="100%" stop-color="#4ADE80"/>
-    </linearGradient>
-    <linearGradient id="barPurpleM" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A78BFA"/>
-    </linearGradient>
-    <linearGradient id="barCyanM" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="380" height="460" fill="url(#bg3m)"/>
-  <circle cx="40"  cy="30"  r="90" fill="#2563EB" opacity="0.40" filter="url(#blob3m)"/>
-  <circle cx="350" cy="60"  r="100" fill="#22C55E" opacity="0.35" filter="url(#blob3m)"/>
-  <circle cx="200" cy="440" r="100" fill="#7C3AED" opacity="0.32" filter="url(#blob3m)"/>
-
-  <g font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-
-    <rect x="16" y="16" width="348" height="150" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3m)" stroke-width="1.5" filter="url(#cardShadow3m)"/>
-    <text x="40" y="50" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">GITHUB OVERVIEW</text>
-
-    <text x="40" y="94" font-size="32" font-weight="700" fill="#F8FAFC">{data["public_repos"]}</text>
-    <text x="40" y="114" font-size="13" font-weight="500" fill="#93C5FD">Public repositories</text>
-
-    <text x="200" y="94" font-size="32" font-weight="700" fill="#F8FAFC">{data["total_stars"]}</text>
-    <text x="200" y="114" font-size="13" font-weight="500" fill="#6EE7B7">Total stars</text>
-
-    <text x="40" y="148" font-size="14" font-weight="600" fill="#D8B4FE">{data["followers"]} followers &#8226; {data["following"]} following</text>
-
-    <rect x="16" y="182" width="348" height="262" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3m)" stroke-width="1.5" filter="url(#cardShadow3m)"/>
-    <text x="40" y="216" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">MOST USED LANGUAGES</text>
-    {"".join(bars)}
-  </g>
-</svg>
-'''
 
 
 def main():
     data = fetch_data()
-    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    with open(os.path.join(repo_root, "assets", "stats.svg"), "w") as f:
-        f.write(render_desktop(data))
-    with open(os.path.join(repo_root, "assets", "stats-mobile.svg"), "w") as f:
-        f.write(render_mobile(data))
+    update_readme_marker_section("GITHUB-STATS", render_stats_markdown(data))
+
+    streak = fetch_contribution_stats(data["created_at"])
+    update_readme_marker_section("STREAK-STATS", render_streak_markdown(streak))
+
     print(f"Regenerated stats for {USERNAME}: {data}")
+    print(f"Streak stats: {streak}")
 
 
 if __name__ == "__main__":

@@ -34,10 +34,9 @@
 
 <!--
   GitHub strips all JS and <style> from rendered READMEs, so true
-  single-active-tab switching isn't possible here -- <details>/<summary>
-  is the closest native equivalent GitHub actually supports: click a
-  title to expand/collapse it. Main is static (always visible, no
-  click needed); Projects/Experience/Social start closed.
+  interactive tabs aren't possible here. Each section below is just a
+  static colored label image (assets/tab-*.svg) followed directly by
+  its content -- always visible, no click/expand needed.
 -->
 
 <div align="center">
@@ -51,10 +50,22 @@
 - 🌱 Exploring **AI integrations** with ERPNext + modern frontend
 
 <div align="center">
-  <picture>
-    <source media="(max-width: 500px)" srcset="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack-mobile.svg" />
-    <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack.svg" alt="Tech stack" width="100%" />
-  </picture>
+
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/python.svg" width="20" height="20" valign="middle" /> **Python** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/mariadb.svg" width="20" height="20" valign="middle" /> **MariaDB** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/redis.svg" width="20" height="20" valign="middle" /> **Redis** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/javascript.svg" width="20" height="20" valign="middle" /> **JavaScript**
+
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/react.svg" width="20" height="20" valign="middle" /> **React** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/vue.svg" width="20" height="20" valign="middle" /> **Vue** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/tailwind.svg" width="20" height="20" valign="middle" /> **Tailwind CSS** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/html5.svg" width="20" height="20" valign="middle" /> **HTML5**
+
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/git.svg" width="20" height="20" valign="middle" /> **Git** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/docker.svg" width="20" height="20" valign="middle" /> **Docker** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/jinja.svg" width="20" height="20" valign="middle" /> **Jinja** &nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/icons/vscode.svg" width="20" height="20" valign="middle" /> **VS Code**
+
 </div>
 
 ### 📊 GitHub Stats
@@ -64,23 +75,35 @@
   were all confirmed broken (naturalWidth 0 on the live page) -- these
   free shared instances are well known for hitting GitHub API rate
   limits under public load, independent of anything in this file.
-  Replaced with a self-hosted glass card (assets/stats.svg) built from
-  real data pulled via `gh api`/`gh repo list`, in the same visual
-  language as the banner and tech-stack graphics, and with a
-  dependency only on this repo instead of a third party's uptime.
+  Replaced with real numbers computed from the GitHub REST API
+  (scripts/generate_stats.py) and written directly into this file as
+  text, no image involved. Auto-refreshed by
+  .github/workflows/update-stats.yml.
+-->
+<!--GITHUB-STATS-START-->
+| Public Repos | Total Stars | Followers | Following |
+|:---:|:---:|:---:|:---:|
+| 15 | 5 | 5 | 5 |
+
+**Most Used Languages:** HTML 35.7% • Python 28.6% • Vue 21.4% • TypeScript 7.1%
+<!--GITHUB-STATS-END-->
+
+<!--
+  github-readme-streak-stats.herokuapp.com was a third-party image
+  badge -- replaced with real numbers computed from GitHub's own
+  GraphQL contribution calendar (scripts/generate_stats.py) and
+  written directly into this file as text, no image involved.
+  Auto-refreshed by .github/workflows/update-stats.yml.
 -->
 <div align="center">
-  <picture>
-    <source media="(max-width: 500px)" srcset="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats-mobile.svg" />
-    <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats.svg" alt="GitHub stats" width="100%" />
-  </picture>
+
+<!--STREAK-STATS-START-->
+🔥 **1,286** total contributions &nbsp;·&nbsp; **4**-day current streak &nbsp;·&nbsp; **13**-day longest streak
+<!--STREAK-STATS-END-->
+
 </div>
 
-<div align="center">
-  <img width="60%" src="https://github-readme-streak-stats.herokuapp.com/?user=ahmedrazasahoo&theme=radical&hide_border=true&background=0D1117&ring=2563EB&fire=22C55E" alt="GitHub streak stats" />
-</div>
 
-### 🐍 Contribution Snake
 
 <div align="center">
   <picture>
@@ -92,8 +115,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=3" width="100%" />
 
-<details>
-<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-projects.svg" alt="Projects tab" height="52" /></summary>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-projects.svg" alt="Projects tab" height="52" />
+</div>
 <br />
 
 <table>
@@ -137,7 +161,9 @@ Implemented and customized ERPNext + Frappe HRMS for Teachafy — Employee Manag
 ---
 
 **Qetah Phase 1**
-Custom ERPNext solution for a freelance services platform with cryptocurrency payment support — inventory, sales &amp; reporting.
+Custom ERPNext solution for a freelance services platform connecting clients with freelancers, with cryptocurrency payment support built in. Covers client/freelancer profiles, job posting &amp; bidding, milestone-based project tracking, order &amp; invoice management, and crypto wallet-based payments and payouts — all backed by ERPNext's inventory, sales &amp; reporting modules.
+
+`Frappe` `ERPNext` `MariaDB` `REST APIs` `Crypto Payments`
 
 [![GitHub](https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/NexTash/Qetah-Phase-1)
 
@@ -145,19 +171,18 @@ Custom ERPNext solution for a freelance services platform with cryptocurrency pa
 
 📦 More on GitHub → [github.com/ahmedrazasahoo?tab=repositories](https://github.com/ahmedrazasahoo?tab=repositories)
 
-**💬 Got a Frappe/ERPNext project?**
+**Got a Frappe/ERPNext project?**
 Open to freelance & long-term collaborations → DM me! 🚀
 
 </td>
 </tr>
 </table>
 
-</details>
-
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=3" width="100%" />
 
-<details>
-<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-experience.svg" alt="Experience tab" height="52" /></summary>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-experience.svg" alt="Experience tab" height="52" />
+</div>
 <br />
 
 <table>
@@ -168,25 +193,24 @@ Open to freelance & long-term collaborations → DM me! 🚀
 *Progressed from Backend Developer → Senior Developer → Team Lead*
 📍 Lahore, Punjab, Pakistan · On-site &nbsp;·&nbsp; 🗓️ May 2022 – Present · 4 yrs 5 mos
 
-- Developing and customizing ERPNext modules — designing and implementing backend solutions that extend ERPNext functionality with seamless business-workflow integration
-- Custom script development — crafting tailored scripts to automate and streamline business processes within ERPNext
+- Design and develop custom ERPNext modules and DocTypes tailored to specific business requirements
+- Extend core ERPNext functionality with custom backend logic, ensuring seamless integration with existing business workflows
+- Build custom workflows and business rules to automate approval chains and operational processes
+- Craft tailored server scripts, client scripts &amp; scheduled jobs to automate and streamline business processes within ERPNext
+- Integrate ERPNext with internal &amp; third-party systems via REST APIs for seamless data exchange
+- Troubleshoot backend issues and optimize performance to maintain system reliability &amp; data integrity
 
-`Frappe` `Back-End Web Development`
-
----
-
-🚧 More detailed history coming soon. In the meantime, [Qetah Phase 1](https://github.com/NexTash/Qetah-Phase-1) and the rest of my [repositories](https://github.com/ahmedrazasahoo?tab=repositories) are the best record of what I've built.
+`Frappe` `ERPNext` `Python` `Back-End Web Development` `Workflow Automation` `REST APIs`
 
 </td>
 </tr>
 </table>
 
-</details>
-
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=3" width="100%" />
 
-<details>
-<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-social.svg" alt="Social & Contact tab" height="52" /></summary>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-social.svg" alt="Social & Contact tab" height="52" />
+</div>
 <br />
 
 <table>
@@ -210,7 +234,5 @@ Open to freelance & long-term collaborations → DM me! 🚀
 </td>
 </tr>
 </table>
-
-</details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=6&section=footer" width="100%" />
