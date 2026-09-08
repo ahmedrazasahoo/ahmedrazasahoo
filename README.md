@@ -1,21 +1,21 @@
 <div align="center">
 
 <!--
-  Note: capsule-render's *text-bearing* banners (any variant with
-  text=/desc=) reliably fail to load through GitHub's own image proxy
-  (camo) -- confirmed by inspecting naturalWidth on the live rendered
-  page. The <text style="..."> element it embeds appears to trip
-  camo's SVG sanitizer specifically; plain color banners with no text
-  render fine either way. Using the (verified-working) gradient strip
-  for color + plain HTML for the name instead of fighting that.
+  Self-hosted glassmorphism banner (assets/banner.svg) instead of a
+  third-party generator: capsule-render's text-bearing SVGs reliably
+  fail through GitHub's image proxy (camo) -- confirmed by inspecting
+  naturalWidth on the live rendered page, the <text style="..."> element
+  it embeds trips camo's SVG sanitizer. Self-hosting via
+  raw.githubusercontent.com sidesteps camo entirely (first-party GitHub
+  domain, not proxied) and gives full control over the design.
 -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=8&section=header" width="100%" />
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/banner.svg" alt="Ahmed Raza -- Frappe & ERPNext Developer" width="100%" />
 
-# Ahmed Raza
+<br />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=4000&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Custom+Frappe+%26+ERPNext+development;Modules+%E2%80%A2+Integrations+%E2%80%A2+Automation;Building+business+solutions+from+Pakistan+%F0%9F%87%B5%F0%9F%87%B0" alt="Typing SVG" />
 
-<br />
+<br /><br />
 
 <img src="https://komarev.com/ghpvc/?username=ahmedrazasahoo&label=Profile+Views&color=2563EB&style=for-the-badge" alt="Profile views" />
 
@@ -49,14 +49,8 @@
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,html,css,bootstrap,tailwind,react,vue,git,docker,mariadb,redis,vscode,github&theme=dark" alt="Tech stack icons" />
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack.svg" alt="Tech stack" width="100%" />
 </div>
-
-| Category | Technologies |
-| :--- | :--- |
-| **Backend & ERP** | `Frappe` `ERPNext` `Python` `REST APIs` |
-| **Frontend** | `JavaScript` `React` `Vue` `Tailwind` |
-| **Infra & Tools** | `MariaDB` `Redis` `Docker` `Git` `Bench` |
 
 ### 📊 GitHub Stats
 
