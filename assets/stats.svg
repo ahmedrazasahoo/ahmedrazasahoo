@@ -26,9 +26,6 @@
     <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#22D3EE"/>
     </linearGradient>
-    <linearGradient id="barPink" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#DB2777"/><stop offset="100%" stop-color="#F472B6"/>
-    </linearGradient>
   </defs>
 
   <rect width="1000" height="300" fill="url(#bg3)"/>
@@ -38,44 +35,35 @@
 
   <g font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
 
-    <!-- Left glass card: profile numbers -->
     <rect x="40" y="40" width="280" height="220" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3)" stroke-width="1.5" filter="url(#cardShadow3)"/>
     <text x="70" y="80" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">GITHUB OVERVIEW</text>
 
     <text x="70" y="130" font-size="34" font-weight="700" fill="#F8FAFC">14</text>
     <text x="70" y="152" font-size="13" font-weight="500" fill="#93C5FD">Public repositories</text>
 
-    <text x="70" y="195" font-size="34" font-weight="700" fill="#F8FAFC">48</text>
-    <text x="70" y="217" font-size="13" font-weight="500" fill="#6EE7B7">Total repositories</text>
+    <text x="70" y="195" font-size="34" font-weight="700" fill="#F8FAFC">5</text>
+    <text x="70" y="217" font-size="13" font-weight="500" fill="#6EE7B7">Total stars</text>
 
     <text x="70" y="245" font-size="15" font-weight="600" fill="#D8B4FE">5 followers &#8226; 5 following</text>
 
-    <!-- Right glass card: language breakdown -->
     <rect x="340" y="40" width="620" height="220" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3)" stroke-width="1.5" filter="url(#cardShadow3)"/>
     <text x="368" y="72" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">MOST USED LANGUAGES</text>
-
-    <!-- HTML 34.8% -->
+    
     <text x="368" y="104" font-size="14" font-weight="600" fill="#F8FAFC">HTML</text>
-    <text x="932" y="104" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">34.8%</text>
+    <text x="932" y="104" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">33.3%</text>
     <rect x="368" y="112" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="112" width="196" height="10" rx="5" fill="url(#barBlue)"/>
-
-    <!-- Vue 21.7% -->
+    <rect x="368" y="112" width="188" height="10" rx="5" fill="url(#barBlue)"/>
     <text x="368" y="144" font-size="14" font-weight="600" fill="#F8FAFC">Vue</text>
-    <text x="932" y="144" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">21.7%</text>
+    <text x="932" y="144" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">25.0%</text>
     <rect x="368" y="152" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="152" width="122" height="10" rx="5" fill="url(#barGreen)"/>
-
-    <!-- Python 19.6% -->
+    <rect x="368" y="152" width="141" height="10" rx="5" fill="url(#barGreen)"/>
     <text x="368" y="184" font-size="14" font-weight="600" fill="#F8FAFC">Python</text>
-    <text x="932" y="184" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">19.6%</text>
+    <text x="932" y="184" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">25.0%</text>
     <rect x="368" y="192" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="192" width="111" height="10" rx="5" fill="url(#barPurple)"/>
-
-    <!-- TypeScript 8.7% -->
+    <rect x="368" y="192" width="141" height="10" rx="5" fill="url(#barPurple)"/>
     <text x="368" y="224" font-size="14" font-weight="600" fill="#F8FAFC">TypeScript</text>
-    <text x="932" y="224" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">8.7%</text>
+    <text x="932" y="224" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">8.3%</text>
     <rect x="368" y="232" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="232" width="49" height="10" rx="5" fill="url(#barCyan)"/>
+    <rect x="368" y="232" width="47" height="10" rx="5" fill="url(#barCyan)"/>
   </g>
 </svg>

@@ -49,7 +49,10 @@
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack.svg" alt="Tech stack" width="100%" />
+  <picture>
+    <source media="(max-width: 500px)" srcset="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack-mobile.svg" />
+    <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tech-stack.svg" alt="Tech stack" width="100%" />
+  </picture>
 </div>
 
 ### 📊 GitHub Stats
@@ -65,7 +68,10 @@
   dependency only on this repo instead of a third party's uptime.
 -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats.svg" alt="GitHub stats" width="100%" />
+  <picture>
+    <source media="(max-width: 500px)" srcset="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats-mobile.svg" />
+    <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/stats.svg" alt="GitHub stats" width="100%" />
+  </picture>
 </div>
 
 <div align="center">
