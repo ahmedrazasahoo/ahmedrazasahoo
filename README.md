@@ -35,11 +35,13 @@
   GitHub strips all JS and <style> from rendered READMEs, so true
   single-active-tab switching isn't possible here -- <details>/<summary>
   is the closest native equivalent GitHub actually supports: click a
-  title to expand/collapse it. Main starts open; the rest start closed.
+  title to expand/collapse it. Main is static (always visible, no
+  click needed); Projects/Experience/Social start closed.
 -->
 
-<details open>
-<summary><img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-main.svg" alt="Main tab" height="52" /></summary>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/tab-main.svg" alt="Main" height="52" />
+</div>
 <br />
 
 - 🇵🇰 **Frappe / ERPNext Developer** from Lahore, Pakistan
@@ -86,8 +88,6 @@
     <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/output/github-snake.svg" />
   </picture>
 </div>
-
-</details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=3" width="100%" />
 
