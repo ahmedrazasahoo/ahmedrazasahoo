@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:22C55E&height=180&section=header&text=Ahmed%20Raza&fontSize=48&fontColor=ffffff&animation=null&fontAlignY=38&desc=Frappe%20%26%20ERPNext%20Developer&descAlignY=58&descSize=18" alt="Header banner" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=180&section=header&text=Ahmed%20Raza&fontSize=48&fontColor=ffffff&fontAlignY=45&desc=Frappe%20%26%20ERPNext%20Developer&descAlignY=65&descSize=18" alt="Header banner" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=4000&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Custom+Frappe+%26+ERPNext+development;Modules+%E2%80%A2+Integrations+%E2%80%A2+Automation;Building+business+solutions+from+Pakistan+%F0%9F%87%B5%F0%9F%87%B0" alt="Typing SVG" />
 
@@ -130,12 +130,15 @@ Open to freelance & long-term collaborations → DM me! 🚀
 
 <div align="center">
   <a href="https://github.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="mailto:ahmedrazasahoo@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://instagram.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://facebook.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
   <!-- Uncomment once you add your real LinkedIn URL:
   <a href="https://www.linkedin.com/in/YOUR-REAL-PROFILE"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   -->
 </div>
 
-<!-- TODO(ahmed): add your real contact email here, e.g.: 📧 you@example.com -->
+📧 **ahmedrazasahoo@gmail.com**
 
 <div align="center">
   <strong>Open to freelance &amp; long-term Frappe / ERPNext projects 💙</strong>
@@ -143,4 +146,4 @@ Open to freelance & long-term collaborations → DM me! 🚀
 
 </details>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22C55E,100:2563EB&height=100&section=footer&animation=null" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:2563EB&height=6&section=footer" width="100%" />
