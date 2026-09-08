@@ -1,6 +1,17 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=180&section=header&text=Ahmed%20Raza&fontSize=48&fontColor=ffffff&fontAlignY=45&desc=Frappe%20%26%20ERPNext%20Developer&descAlignY=65&descSize=18" alt="Header banner" width="100%" />
+<!--
+  Note: capsule-render's *text-bearing* banners (any variant with
+  text=/desc=) reliably fail to load through GitHub's own image proxy
+  (camo) -- confirmed by inspecting naturalWidth on the live rendered
+  page. The <text style="..."> element it embeds appears to trip
+  camo's SVG sanitizer specifically; plain color banners with no text
+  render fine either way. Using the (verified-working) gradient strip
+  for color + plain HTML for the name instead of fighting that.
+-->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:22C55E&height=8&section=header" width="100%" />
+
+# Ahmed Raza
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=4000&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Custom+Frappe+%26+ERPNext+development;Modules+%E2%80%A2+Integrations+%E2%80%A2+Automation;Building+business+solutions+from+Pakistan+%F0%9F%87%B5%F0%9F%87%B0" alt="Typing SVG" />
 
