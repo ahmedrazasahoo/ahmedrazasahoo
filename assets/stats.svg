@@ -49,21 +49,21 @@
     <rect x="340" y="40" width="620" height="220" rx="20" fill="#ffffff" fill-opacity="0.08" stroke="url(#cardStroke3)" stroke-width="1.5" filter="url(#cardShadow3)"/>
     <text x="368" y="72" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="1">MOST USED LANGUAGES</text>
     
-    <text x="368" y="104" font-size="14" font-weight="600" fill="#F8FAFC">Python</text>
-    <text x="932" y="104" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">30.8%</text>
+    <text x="368" y="104" font-size="14" font-weight="600" fill="#F8FAFC">HTML</text>
+    <text x="932" y="104" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">35.7%</text>
     <rect x="368" y="112" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="112" width="174" height="10" rx="5" fill="url(#barBlue)"/>
-    <text x="368" y="144" font-size="14" font-weight="600" fill="#F8FAFC">HTML</text>
-    <text x="932" y="144" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">30.8%</text>
+    <rect x="368" y="112" width="201" height="10" rx="5" fill="url(#barBlue)"/>
+    <text x="368" y="144" font-size="14" font-weight="600" fill="#F8FAFC">Python</text>
+    <text x="932" y="144" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">28.6%</text>
     <rect x="368" y="152" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="152" width="174" height="10" rx="5" fill="url(#barGreen)"/>
+    <rect x="368" y="152" width="161" height="10" rx="5" fill="url(#barGreen)"/>
     <text x="368" y="184" font-size="14" font-weight="600" fill="#F8FAFC">Vue</text>
-    <text x="932" y="184" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">23.1%</text>
+    <text x="932" y="184" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">21.4%</text>
     <rect x="368" y="192" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="192" width="130" height="10" rx="5" fill="url(#barPurple)"/>
+    <rect x="368" y="192" width="121" height="10" rx="5" fill="url(#barPurple)"/>
     <text x="368" y="224" font-size="14" font-weight="600" fill="#F8FAFC">TypeScript</text>
-    <text x="932" y="224" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">7.7%</text>
+    <text x="932" y="224" font-size="13" font-weight="500" fill="#94A3B8" text-anchor="end">7.1%</text>
     <rect x="368" y="232" width="564" height="10" rx="5" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="368" y="232" width="43" height="10" rx="5" fill="url(#barCyan)"/>
+    <rect x="368" y="232" width="40" height="10" rx="5" fill="url(#barCyan)"/>
   </g>
 </svg>
