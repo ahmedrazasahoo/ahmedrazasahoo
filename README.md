@@ -24,6 +24,7 @@
 <a href="https://ahmedrazasahoo.github.io/"><img src="https://img.shields.io/badge/Portfolio-Visit_Site-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio site" /></a>
 <a href="https://github.com/ahmedrazasahoo?tab=followers"><img src="https://img.shields.io/github/followers/ahmedrazasahoo?style=for-the-badge&color=22C55E&logo=github&logoColor=white&label=Followers" alt="GitHub Followers" /></a>
 <a href="https://github.com/ahmedrazasahoo"><img src="https://img.shields.io/badge/GitHub-ahmedrazasahoo-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://github.com/ahmedrazasahoo/ahmedrazasahoo/actions/workflows/update-stats.yml"><img src="https://github.com/ahmedrazasahoo/ahmedrazasahoo/actions/workflows/update-stats.yml/badge.svg" alt="Update GitHub Stats workflow status" /></a>
 <!-- Uncomment once you add your real LinkedIn URL:
 <a href="https://www.linkedin.com/in/YOUR-REAL-PROFILE"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 -->
