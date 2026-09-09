@@ -7,8 +7,9 @@ service (github-readme-stats, github-profile-trophy, and
 github-readme-streak-stats were all confirmed broken at various points).
 Writes plain markdown between HTML comment markers -- no images involved.
 Uses only public REST/GraphQL endpoints (no PAT required) -- the default
-GITHUB_TOKEN can't see private repos, so repo/star counts are
-public-repo-only by design.
+GITHUB_TOKEN can't see private repos or private contributions, so
+repo/star counts and the contribution/streak numbers are all
+public-only by design.
 """
 import json
 import os
