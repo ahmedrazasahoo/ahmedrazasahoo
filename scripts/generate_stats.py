@@ -41,6 +41,8 @@ def graphql(query, variables):
         return json.loads(resp.read().decode())
 
 
+# GitHub's contributionCalendar only accepts a <=1 year from/to window per
+# call, hence the year-by-year looping in fetch_contribution_stats() below.
 CALENDAR_QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
