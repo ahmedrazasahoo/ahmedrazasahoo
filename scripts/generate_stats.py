@@ -174,7 +174,6 @@ def fetch_data():
     }
 
 
-
 def main():
     data = fetch_data()
     update_readme_marker_section("GITHUB-STATS", render_stats_markdown(data))
