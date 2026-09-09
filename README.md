@@ -83,7 +83,7 @@
 <!--GITHUB-STATS-START-->
 | Public Repos | Total Stars | Followers | Following |
 |:---:|:---:|:---:|:---:|
-| 15 | 5 | 5 | 5 |
+| 15 | 6 | 5 | 5 |
 
 **Most Used Languages:** HTML 35.7% • Python 28.6% • Vue 21.4% • TypeScript 7.1%
 <!--GITHUB-STATS-END-->
@@ -98,7 +98,7 @@
 <div align="center">
 
 <!--STREAK-STATS-START-->
-🔥 **1,286** total contributions &nbsp;·&nbsp; **4**-day current streak &nbsp;·&nbsp; **13**-day longest streak
+🔥 **1,293** total contributions &nbsp;·&nbsp; **1**-day current streak &nbsp;·&nbsp; **1**-day longest streak
 <!--STREAK-STATS-END-->
 
 </div>
