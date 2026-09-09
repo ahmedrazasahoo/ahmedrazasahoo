@@ -1,4 +1,4 @@
-name: Update GitHub Stats Card
+name: Update GitHub Stats
 
 on:
   schedule:
