@@ -9,7 +9,7 @@
   raw.githubusercontent.com sidesteps camo entirely (first-party GitHub
   domain, not proxied) and gives full control over the design.
 -->
-<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/banner.svg" alt="Ahmed Raza -- Frappe & ERPNext Developer" width="100%" />
+<img src="https://raw.githubusercontent.com/ahmedrazasahoo/ahmedrazasahoo/main/assets/banner.svg" alt="Ahmed Raza — Frappe & ERPNext Developer" width="100%" />
 
 <br />
 
