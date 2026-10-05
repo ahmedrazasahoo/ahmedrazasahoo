@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Regenerates the GitHub Stats and streak text in README.md from live data.
+"""Regenerates the live profile cards (assets/profile/*.svg) from live data.
 
 Run by .github/workflows/update-stats.yml on a schedule so the profile's
 stats never go stale and never depend on a third-party rate-limited
 service (github-readme-stats, github-profile-trophy, and
 github-readme-streak-stats were all confirmed broken at various points).
-Writes plain markdown between HTML comment markers -- no images involved.
+Fetches the numbers here; scripts/profile_cards.py draws the SVGs.
 Uses only public REST/GraphQL endpoints (no PAT required) -- the default
 GITHUB_TOKEN can't see private repos or private contributions, so
 repo/star counts and the contribution/streak numbers are all
@@ -13,8 +13,9 @@ public-only by design.
 """
 import json
 import os
-import re
 import urllib.request
+
+from profile_cards import render_live_cards
 from datetime import datetime, timedelta
 
 USERNAME = os.environ.get("GITHUB_REPOSITORY_OWNER", "ahmedrazasahoo")
@@ -63,7 +64,7 @@ def fetch_contribution_stats(created_at):
     now = datetime.utcnow()
 
     all_time_total = 0
-    last_window_days = []
+    days = {}
     cursor = created
     while cursor < now:
         window_end = min(cursor + timedelta(days=365), now)
@@ -74,23 +75,25 @@ def fetch_contribution_stats(created_at):
         })
         cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
         all_time_total += cal["totalContributions"]
-        last_window_days = [
-            (d["date"], d["contributionCount"])
-            for week in cal["weeks"] for d in week["contributionDays"]
-        ]
+        for week in cal["weeks"]:
+            for d in week["contributionDays"]:
+                days[d["date"]] = d["contributionCount"]
         cursor = window_end
 
-    i = len(last_window_days) - 1
-    if last_window_days and last_window_days[i][1] == 0:
+    # Streaks span the whole history, not just the last (possibly
+    # days-long) calendar window.
+    history = sorted(days.items())
+    i = len(history) - 1
+    if history and history[i][1] == 0:
         i -= 1
     current_streak = 0
-    while i >= 0 and last_window_days[i][1] > 0:
+    while i >= 0 and history[i][1] > 0:
         current_streak += 1
         i -= 1
 
     longest_streak = 0
     run = 0
-    for _, count in last_window_days:
+    for _, count in history:
         if count > 0:
             run += 1
             longest_streak = max(longest_streak, run)
@@ -102,41 +105,6 @@ def fetch_contribution_stats(created_at):
         "current_streak": current_streak,
         "longest_streak": longest_streak,
     }
-
-
-def update_readme_marker_section(marker, text):
-    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    readme_path = os.path.join(repo_root, "README.md")
-    with open(readme_path) as f:
-        content = f.read()
-
-    new_content = re.sub(
-        rf"(<!--{marker}-START-->\n).*?(\n<!--{marker}-END-->)",
-        lambda m: m.group(1) + text + m.group(2),
-        content,
-        flags=re.DOTALL,
-    )
-    with open(readme_path, "w") as f:
-        f.write(new_content)
-
-
-def render_streak_markdown(streak):
-    return (
-        f'🔥 **{streak["total_contributions"]:,}** total contributions '
-        f'&nbsp;·&nbsp; **{streak["current_streak"]}**-day current streak '
-        f'&nbsp;·&nbsp; **{streak["longest_streak"]}**-day longest streak'
-    )
-
-
-def render_stats_markdown(data):
-    lang_line = " • ".join(f'{l["name"]} {l["pct"]}%' for l in data["languages"])
-    return (
-        "| Public Repos | Total Stars | Followers | Following |\n"
-        "|:---:|:---:|:---:|:---:|\n"
-        f'| {data["public_repos"]} | {data["total_stars"]} | {data["followers"]} | {data["following"]} |\n'
-        "\n"
-        f"**Most Used Languages:** {lang_line}"
-    )
 
 
 def fetch_data():
@@ -179,13 +147,9 @@ def fetch_data():
 
 def main():
     data = fetch_data()
-    update_readme_marker_section("GITHUB-STATS", render_stats_markdown(data))
-
-    streak = fetch_contribution_stats(data["created_at"])
-    update_readme_marker_section("STREAK-STATS", render_streak_markdown(streak))
-
-    print(f"Regenerated stats for {USERNAME}: {data}")
-    print(f"Streak stats: {streak}")
+    data.update(fetch_contribution_stats(data["created_at"]))
+    cards = render_live_cards(data)
+    print(f"Regenerated {', '.join(cards)} for {USERNAME}: {data}")
 
 
 if __name__ == "__main__":
